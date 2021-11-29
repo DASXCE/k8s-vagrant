@@ -1,0 +1,29 @@
+{
+    "CN": "harbor-mne-test_server-rxtvap1100",
+    "hosts": [
+        "harbor.lab",
+        "*harbor.lab",
+        "harbor",
+        "*harbor",
+        "rxtvap1100.lab",
+        "*rxtvap1100.lab",
+        "rxtvap1100",
+        "*rxtvap1100",
+        "127.0.0.1",
+        "172.22.4.100"
+    ],
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "C": "ME",
+            "ST": "Montenegro",
+            "L": "Podgorica",
+            "O": "First Data",
+            "OU": "goran test",
+            "emailAddress": "goran.rajta@firstdata.com"
+        }
+    ]
+}

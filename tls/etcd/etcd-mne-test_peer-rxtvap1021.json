@@ -1,0 +1,25 @@
+{
+    "CN": "etcd-mne-test_peer-rxtvap1021",
+    "hosts": [
+        "rxtvap1021.lab",
+        "*rxtvap1021.lab",
+        "rxtvap1021",
+        "*rxtvap1021",
+        "127.0.0.1",
+        "172.22.4.21"
+    ],
+    "key": {
+        "algo": "rsa",
+        "size": 2048
+    },
+    "names": [
+        {
+            "C": "ME",
+            "ST": "Montenegro",
+            "L": "Podgorica",
+            "O": "First Data",
+            "OU": "goran test",
+            "emailAddress": "goran.rajta@firstdata.com"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "signing": {
+        "default": {
+            "expiry": "87600h"
+        },
+        "profiles": {
+            "server": {
+                "expiry": "87600h",
+                "usages": [
+                    "signing",
+                    "key encipherment",
+                    "non repudiation",
+                    "server auth"
+                ]
+            },
+            "client": {
+                "expiry": "87600h",
+                "usages": [
+                    "signing",
+                    "key encipherment",
+                    "non repudiation",
+                    "client auth"
+                ]
+            },
+            "peer": {
+                "expiry": "87600h",
+                "usages": [
+                    "signing",
+                    "key encipherment",
+                    "non repudiation",
+                    "server auth",
+                    "client auth"
+                ]
+            }
+        }
+    }
+}
