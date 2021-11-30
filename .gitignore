@@ -1,4 +1,4 @@
 *.box
 .vscode/
 .vagrant/
-test.py
+local-scripts/
