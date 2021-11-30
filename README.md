@@ -1,5 +1,6 @@
 ### Prepare
 ```sh
+sudo yum update -y
 sudo swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
@@ -72,7 +73,7 @@ kind: ClusterConfiguration
 kubernetesVersion: 1.22.4               #<-- Use the word stable for newest version
 controlPlaneEndpoint: "rxtvap1010:6443"  #<-- Use the node alias not the IP
 networking:
-  podSubnet: 192.168.0.0/16
+  podSubnet: 192.168.0.0/16 # Calico default CALICO_IPV4POOL_CIDR
 EOF
 
 kubeadm init --config=kubeadm-config.yaml --upload-certs | tee kubeadm-init.out
