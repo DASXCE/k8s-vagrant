@@ -56,7 +56,7 @@ sudo systemctl enable --now kubelet
 #
 ```
 
-### Bootrstrap the Controll plane
+### Bootstrap the control plane
 ```sh
 # You can download images only
 #kubeadm config images pull
