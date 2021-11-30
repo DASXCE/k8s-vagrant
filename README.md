@@ -59,7 +59,7 @@ sudo systemctl enable --now kubelet
 ### Bootrstrap the Controll plane
 ```sh
 # You can download images only
-kubeadm config images pull
+#kubeadm config images pull
 
 cat <<EOF | sudo tee kubeadm-config.yaml
 apiVersion: kubeadm.k8s.io/v1beta2
