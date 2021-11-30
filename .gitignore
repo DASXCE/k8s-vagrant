@@ -1,3 +1,4 @@
 *.box
 .vscode/
 .vagrant/
+test.py
