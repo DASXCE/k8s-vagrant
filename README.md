@@ -5,7 +5,7 @@ sudo swapoff -a
 sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
 sudo yum install wget -y
-
+#
 ```
 
 ### Install Docker
@@ -30,7 +30,7 @@ cat <<EOF | sudo tee /etc/docker/daemon.json
 EOF
 sudo systemctl start docker
 sudo docker info
-
+#
 ```
 
 ### Kubeadm, kubelet, kubectl
@@ -53,7 +53,7 @@ sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
 sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 
 sudo systemctl enable --now kubelet
-
+#
 ```
 
 ### Bootrstrap the Controll plane
@@ -77,7 +77,7 @@ networking:
 EOF
 
 kubeadm init --config=kubeadm-config.yaml --upload-certs | tee kubeadm-init.out
-
+#
 ```
 
 ### Setup KUBECONFIG
@@ -88,7 +88,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 echo "source <(kubectl completion bash)" >> $HOME/.bashrc
 
 kubectl get pods -n kube-system
-
+#
 ```
 
 
@@ -97,7 +97,7 @@ kubectl get pods -n kube-system
 wget https://docs.projectcalico.org/manifests/calico.yaml
 
 kubectl apply -f calico.yaml
-
+#
 ```
 
 ### Join worker node
@@ -111,5 +111,5 @@ openssl dgst -sha256 -hex | sed 's/ˆ.* //' |
 
 # On the worker
 sudo kubeadm join rxtvap1010:6443 --token TOKEN --discovery-token-ca-cert-hash sha256:HASH
-
+#
 ```
